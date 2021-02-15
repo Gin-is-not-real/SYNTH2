@@ -1,0 +1,38 @@
+/* GEC2 */
+.gecDivCanvas {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 26px 26px;
+} 
+#subDiv_gecInGate {
+}
+#subDiv_gecInTime {
+    grid-row: 2;
+}
+#subDiv_gecCanvas {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+
+/* #modulePanel_gecOscGain {
+    display: grid;
+    grid-template-columns: 1fr, 3fr;
+    grid-template-rows: 30px 30px 30px 30px;
+}
+.gecDivMode {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+.gecDivOthers {
+    grid-column: 1;
+    grid-row: 2/4;
+}
+.gecDivCanvas {
+    grid-column: 2;
+    grid-row: 2;
+}
+.gecDivEnvTimes {
+    grid-column: 2;
+    grid-row: 4;
+} */

@@ -1,0 +1,48 @@
+controllers graphiques
+    un canvas pour selectionner une valeur
+    click sur un parametre, une fenetre s'affiche avec le controlleur (graphique et les inputs ?)
+
+////////////////////////////////////////////
+2 type de modules;
+    nodes 
+        faire remonter a synthLine les proprietes controllables
+    controllers
+
+////////////////////////////////////////////
+matrice de routing
+    controllers -> controllables
+////////////////////////////////////////////
+interface de sauvegarde
+    de synthLine
+    de params
+////////////////////////////////////////////
+modules
+
+    synthLine      
+        -> generalOutput = la sortie sur laquelle seront pluggés les derniers nodes de chaque ligne
+
+        -> connectionsChain[] //contiens les nodes pluggés
+            //il faudras qu'elle contienne des lignes de nodes
+
+        -> controllablesParams[] [node.name = [node.controllablesParams]]  //controllablesParams de chaque node
+
+        -> trigList[] listes des controllers triggers
+
+    nodes 
+        -> controllablesParams [{target, targetedParam}];
+        -> controllersList[];
+        -> controlsList[] [param, controller]; //si un de ces attribut est ciblé par un control
+
+        -> defaultOuput
+        -> output
+
+    controllers
+        -> controlsList[] //liste des controls ciblant un de ses attribut
+        -> targetsList[] //liste {target, targetedParam} de ses cibles
+        -> triggor //objet contennant les intervalId, le time count et la fonction trig du controller/triggor 
+
+    analysers
+        -> input, defaultOutput, output
+
+
+    
