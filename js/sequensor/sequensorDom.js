@@ -1,4 +1,8 @@
 function seqCreateDomPanel1(seq) {
+    let divTitle = createDiv("divTitle", seq.name);
+    divTitle.textContent = seq.name;
+    seq.domPanel.appendChild(divTitle);
+
     let divSequensor = createDiv("seqDivSequensor", seq.name);
     divSequensor.appendChild(seqCreateBtnPlay(seq));
     divSequensor.appendChild(seqCreateInRunInterval(seq));

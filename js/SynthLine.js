@@ -17,6 +17,7 @@ class SynthLine {
         this.generalOutput = this.audioCtx.destination;
 
         this.domPanel = createDiv("synthPanel", name);
+        this.domPanel2 = createDiv("synthPanel2", name);
 
         console.log(this, "created");
     }
@@ -44,14 +45,18 @@ class SynthLine {
         chain[chain.length - 1].output = this.generalOutput;
         chain[chain.length - 1].connect(chain[chain.length - 1].output);
 
-        console.log("synth chain:", chain); 
+        // console.log("synth chain:", chain); 
     }
     displayOnSynthView() {
         if(synthView.childNodes.length < 1) {
             synthView.appendChild(this.domPanel);
+            synthView.appendChild(this.domPanel2);
+
         }
         else {
             synthView.replaceChild(this.domPanel, synthView.childNodes[0]); 
+            synthView.replaceChild(this.domPanel2, synthView.childNodes[1]); 
+
         }
     }
     addControllable(module) {
@@ -87,17 +92,18 @@ function createDefaultSynthLine(name) {
     // synthLine.modulesList[nodesList].push(osc);
     synthLine.connectionsChain.push(osc.gainNode);
     synthLine.domPanel.appendChild(osc.domPanel);
+    // synthLine.domPanel.appendChild(osc.gainNode.domPanel);
     
     let gecOscGain = createGraphicalEnvController1("gecOscGain", synthLine, synthLine.osc.gainNode.gain, "value", "1");
     synthLine.domPanel.appendChild(gecOscGain.domPanel);
 
-    let filterModule = createFilter2filters("filter2Filters", synthLine, osc.gainNode);
-    synthLine.domPanel.appendChild(filterModule.domPanel);
-
     let gec2OscFreq = createGraphicalEnvController1("gec2OscFreq", synthLine, synthLine.osc.frequency, "value");
     synthLine.domPanel.appendChild(gec2OscFreq.domPanel);
 
-    console.log(filterModule.filtersList[0].frequency.controlsList["value"][0].value);
+    let filterModule = createFilter2filters("filter2Filters", synthLine, osc.gainNode);
+    synthLine.domPanel.appendChild(filterModule.domPanel);
+
+    // console.log(filterModule.filtersList[0].frequency.controlsList["value"][0].value);
 
     let spectrum = createSpectrum1(synthLine);
     synthLine.domPanel.appendChild(spectrum.domPanel);

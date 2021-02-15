@@ -1,4 +1,5 @@
 function gainCreateDomPanel(gainNode) {
+    gainNode.controlList = [];
     gainCreateDivGain(gainNode);
     gainNode.controlList.forEach(element => {
         element.value = 1;

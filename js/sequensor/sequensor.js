@@ -14,7 +14,7 @@ class Sequensor {
     constructor(name) {
         this.name = name;
 
-        this.domPanel = createDiv("modulePanel", this.name);
+        this.domPanel = createDiv("sequensorPanel", this.name);
         
     }
 

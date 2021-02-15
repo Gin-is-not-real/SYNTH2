@@ -3,6 +3,7 @@ function createOscillator1(synth) {
     // oscInitState1(osc);
     oscInitConnections(osc);
     oscCreateDomPanel1(osc);
+    gainCreateDomPanel(osc.gainNode);
 
     return osc;
 }
@@ -21,7 +22,10 @@ function createOsc(synth) {
     //GAIN
     osc.gainNode = synth.audioCtx.createGain();
     osc.gainNode.name = "oscGain_" + synth.name;
+
     osc.gainNode.gain.value = 0;
+    osc.gainNode.domPanel = createDiv("modulePanel", osc.name + "Gain"); 
+
 
     osc.controllablesParams = [
         // {text: "type", target: osc, targetedParam: "type"},

@@ -14,7 +14,7 @@ sequensor.createSynthLine();
 let synth = sequensor.synthLines[0];
 // console.log(synth);
 
-console.log(synth.controllersModulesList[0]);
+// console.log(synth.controllersModulesList[0]);
 //////////////////////////////////////////////////:
 //MATRICE
 // let modMatrice = createModulationsMatrice1("matrice", synth);

@@ -14,25 +14,3 @@
     grid-column: 2;
 }
 
-
-/* #modulePanel_gecOscGain {
-    display: grid;
-    grid-template-columns: 1fr, 3fr;
-    grid-template-rows: 30px 30px 30px 30px;
-}
-.gecDivMode {
-    grid-column: 1/4;
-    grid-row: 1;
-}
-.gecDivOthers {
-    grid-column: 1;
-    grid-row: 2/4;
-}
-.gecDivCanvas {
-    grid-column: 2;
-    grid-row: 2;
-}
-.gecDivEnvTimes {
-    grid-column: 2;
-    grid-row: 4;
-} */

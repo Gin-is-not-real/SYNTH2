@@ -9,16 +9,22 @@
     background-color: rgb(34, 29, 29);
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: 7px;
 }
 /* MODULE */
-.modulePanel {
+.modulePanel, .sequensorPanel {
     background-color: rgb(53, 45, 45);
     border: 1px solid grey;
     color: grey;    
     padding: 2px;
     margin-right: 5px;
     min-width: max-content;
+}
+.sequensorPanel {
+    padding: 5px;
+    margin-left: 5px;
+    min-width: max-content;
+    max-width: min-content;
 }
 .matricePanel {
     background-color: rgb(53, 45, 45);
@@ -29,15 +35,17 @@
     min-width: max-content;
     max-height: 100px;
 }
-.modulePanel > div {
+.modulePanel > div,  .sequensorPanel > div{
     padding: 2px;
     min-width: max-content;
+    /* border: 1px solid grey; */
+
 }
 
 .subDiv {
     padding: 2px;
     display: inline;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     font-size: small;
 }
 /* OSC SECTION */
